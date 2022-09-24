@@ -1,0 +1,508 @@
+main {
+    font-family: 'IBM Plex Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+
+/* General content of main page*/
+#container {
+    position: relative;
+    background-color: white;
+    height: 100vh;
+    background: linear-gradient(#47e9e9 70%, black 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#container::before {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to top, black, transparent);
+    height: 100px;
+    width: 100%;
+    z-index: 2000;
+}
+
+/* Content of header and their links*/
+
+#container .rodape-geral {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 190px;
+    width: 100vw;
+    justify-content: space-between;
+    z-index: 5000;
+
+}
+
+#container .logo {
+    text-align: center;
+    width: 50vw;
+    opacity: 0.8;
+}
+
+#container .links {
+    text-align: center;
+    width: 50vw;
+}
+
+#container .li-links {
+    margin: 30px;
+    background-color: black;
+    border: solid 15px black;
+    border-radius: 20px;
+    opacity: 0.6;
+    transition: 1.3s;
+
+
+}
+
+#container .li-links:hover {
+    opacity: 1;
+}
+
+#container .ul-links {
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#container img {
+    height: 150px;
+    width: 150px;
+}
+
+/* Content of body images text and background*/
+#apresentation {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 68%;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: black;
+    width: 12%;
+    padding: 20px;
+}
+
+#apresentation p {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+#container #nuvem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: nuvem 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#container #sol {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 25%;
+    height: 25%;
+}
+
+#container #montanha {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    z-index: 1000;
+}
+
+/* Animation for clouds*/
+
+@keyframes nuvem {
+    from {
+        transform: translate3d(-20px, -20px, -20px);
+    }
+
+    to {
+        transform: translate3d(20px, 20px, 20px);
+    }
+}
+
+/* Text editing for main body*/
+#text {
+    background-color: black;
+    height: 100%;
+    width: 70%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+@keyframes animacao {
+    from {
+        transform: translate3d(-50, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes animacaoOff {
+    to {
+        transform: translate3d(-50, 0, 0);
+        opacity: 0;
+    }
+
+    from {
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+#text .box-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#text .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+#text img {
+    border-left: 5px solid #4dffff;
+    border-radius: 25px;
+}
+
+#text p {
+    transform: translateX(45px);
+    text-align: justify;
+    color: aliceblue;
+    font-size: 20px;
+    word-spacing: 1.5px;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    width: 50%;
+}
+
+#projects {
+    background: url(background-parallax.png);
+    background-size: 20%;
+    background-attachment: fixed;
+    border-radius: 30px;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    opacity: 0;
+
+}
+
+#title-projects,
+#title-contact,
+#title-pong,
+#title-text {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+#title-projects::before,
+#title-contact::before,
+#title-pong::before {
+    content: '';
+    color: black;
+    border-top: 1px solid #4dffff;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    padding: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.box-projects {
+    width: 150px;
+    opacity: 0.8;
+    background-color: #4dffff86;
+    border-radius: 30px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.box-projects::before {
+    content: '';
+    background: url(background-project.png);
+    background-size: 200px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+
+}
+
+.box-projects:hover::before {
+    animation: projects 1s 0.3s cubic-bezier(.89, -0.21, .52, 1.02) forwards;
+}
+
+@keyframes projects {
+    to {
+        background-size: 2000px;
+        opacity: 0;
+    }
+}
+
+.image-project {
+    height: 150px;
+    width: 150px;
+}
+
+/* Content of form */
+#contacts {
+    color: aliceblue;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    opacity: 0;
+    border-left: 1px dashed #3fcccc7f;
+}
+
+#contacts label {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 5px 100px;
+}
+
+#contacts form input,
+#contacts form textarea {
+    margin: 15px 0 5px 100px;
+    width: 30vw;
+    border-radius: 5px;
+}
+
+#contacts .enviar {
+    display: block;
+    width: 200px;
+    padding: 12px;
+    justify-content: center;
+    margin: 20px auto;
+    transition: 1s;
+}
+
+#contact .enviar:hover {
+    transform: scale(1.05);
+    background-color: #4dffff;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    color: aliceblue;
+    position: relative;
+    background-color: #5b5c5cc0;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    top: 0;
+    display: block;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(1, 25, 26, 0.77), transparent);
+    height: 400px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+footer div {
+    transform: translateY(30px);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+footer .logo {
+    display: block;
+    margin: 0 auto;
+    transform: scale(0.6);
+}
+
+footer .cloud-footer {
+    opacity: 0.2;
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 450px;
+    width: 100vw;
+    animation: nuvem 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.email img,
+.number img {
+    width: 70px;
+    height: 70px;
+}
+
+#pong {
+    margin: 20px auto;
+    position: relative;
+    opacity: 0;
+}
+
+#play {
+    background: url(background-parallax.png);
+    background-size: 20%;
+    background-attachment: fixed;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+#myCanvas {
+    display: block;
+    margin: 20px auto;
+    background: url(background-parallax.png);
+    background-size: 20%;
+    position: relative;
+    background-size: cover;
+
+}
+
+canvas {
+    position: relative;
+    opacity: 0;
+
+}
+
+/* mobile optimization */
+
+
+@media screen and (max-width: 600px) {
+
+    #container,
+    #apresentation,
+    #text,
+    #contact,
+    #projects,
+    #play,
+    footer {
+        width: auto;
+    }
+
+    #container {
+        height: 75vh;
+    }
+
+    #apresentation {
+        z-index: 9999;
+    }
+
+    #text {
+        margin-top: 30px;
+
+    }
+
+    .rodape-geral {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .ul-links {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+
+    #text {
+        margin: 0;
+        padding: 0;
+    }
+
+    #text p {
+        transform: translateX(0);
+        margin: 0 15px 0 15px;
+        padding: 30px;
+        width: auto;
+    }
+
+    #text .box-img {
+        display: flex;
+        flex-direction: column;
+        transform: scale(0.5);
+    }
+
+    #text .box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #projects {
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
+        max-height: 40vh;
+    }
+
+    .box-projects {
+        transform: scale(0.8);
+    }
+
+    #pong {
+        display: none;
+    }
+
+    #contacts label {
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 5px 10px;
+    }
+
+    #contacts form input,
+    #contacts form textarea {
+        margin: 15px 0 5px 10px;
+        width: 70vw;
+        height: 20px;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<main>
+    <title></title>
+
+    <body>
+        <header>
+            <section id="container">
+                <div class="rodape-geral">
+                    <div class="logo">
+                        <img src="logo-branco.png" alt="logo">
+                    </div>
+                    <div class="links">
+                        <ul class="ul-links">
+                            <li class="li-links"><a class="smoth aboutMe" href="#">Sobre Mim</a></li>
+                            <li class="li-links"><a class="smoth project" href="#">Projetos</a></li>
+                            <li class="li-links"><a class="smoth x-game" href="#">X-GAME</a></li>
+                            <li class="li-links"><a class="smoth contact" href="#">Contato</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="apresentation">
+                    <p>Seja, Bem Vindo!</p>
+                </div>
+                <img src="3.png" id="nuvem">
+                <img src="4.png" id="sol">
+                <img src="5.png" id="montanha">
+            </section>
+            <section id="text">
+                <section id="title-text">
+                    <h2>Sobre Mim</h2>
+                </section>
+
+                <div class="box">
+                    <img id="text-img" src="Matheus-Joshua.jpeg" alt="Me" width="300" height="450">
+                    <p>
+                        Iniciei minha carreira profissional há 11 anos, como Auxilixar Administrativo, passando
+                        posteriormente à função de Assistente Administrativo e, desde 2020 atuando como Gerente Administrativo, sendo
+                        responsável por gerir o setor logístico, bem como, criei uma boa experiência em TeamWord. Neste meio tempo, me
+                        tornei bacharel em ciências jurídicas, mas, internamente nutria uma grande paixão pelo universo da tecnologia e da
+                        computação. Sendo assim, comecei a estudar os princípios da programação na Alura, curso que tem me despertado cada vez
+                        mais anseio de aprender, ao passo que me torna cada vez mais capaz tecnicamente, também. Como resultado dessas tantas
+                        horas de estudo, finalizei o meu primeiro projeto, este site de apresentação, e busco uma oportunidade para trabalhar na
+                        área e colocar meus treinamentos em prática e continuar a aprender novas liguagens.<br><br> Conto com a ajuda de vocês e agradeço pela atenção até o momento.<br>
+                    </p>
+                </div>
+
+            </section>
+
+        </header>
+        <section id="title-projects">
+            <h2>Projetos</h2>
+        </section>
+        <section id="projects">
+
+            <div class="box-projects">
+                <ul>
+                    <li class="li-projects"><a href="#"><img class="image-project" src="soon.png" alt="projetos"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-projects">
+                <ul>
+                    <li class="li-projects"><a href="#"><img class="image-project" src="soon.png" alt="projetos"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-projects">
+                <ul>
+                    <li class="li-projects"><a href="#"><img class="image-project" src="soon.png" alt="projetos"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-projects">
+                <ul>
+                    <li class="li-projects"><a href="#"><img class="image-project" src="soon.png" alt="projetos"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-projects">
+                <ul>
+                    <li class="li-projects"><a href="#"><img class="image-project" src="soon.png" alt="projetos"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="box-projects">
+                <ul>
+                    <li class="li-projects"><a href="#"><img class="image-project" src="soon.png" alt="projetos"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+        <section id="pong">
+            <section id="title-pong">
+                <h2>X - GAME</h2>
+            </section>
+            <img id="play" src="play.svg" width="700" height="300">
+            <canvas id="myCanvas" width="480" height="320"></canvas>
+        </section>
+
+        <section id="contacts">
+
+            <section id="title-contact">
+                <h2>Contate-me</h2>
+            </section>
+
+            <form action="https://formsubmit.co/matheus.joshua@live.com" method="POST">
+
+                <label for="text">Identifique-se</label>
+                <input type="text" name="name" class="input-padrao" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" class="input-padrao" required required
+                    placeholder="seuemail@dominio.com">
+
+                <label for="text">Dicas? Deixe sua sustão!</label>
+                <textarea cols="70" rows="10" type="text" name="text" class="input-padrao" required required
+                    placeholder="Deixe sua sugestão.."></textarea>
+
+                <input type="hidden" name="_next" value="https://endearing-gnome-6058f8.netlify.app/">
+                <button type="submit" class="enviar">Enviar</button>
+            </form>
+        </section>
+    </body>
+    <footer>
+        <div class="email"> <img src="email.png" alt="email">
+            <p>Email: matheus.joshua@live.com</p>
+        </div>
+        <div class="number"><img src="contato.png" alt="contato">
+            <p>Telegram: +55 (19) 99670-4970</p>
+        </div>
+        <img src="texto-logo-preto.png" alt="footer" class="logo">
+        <img src="3.png" alt="clouds" class="cloud-footer">
+    </footer>
+
+</main>
+
+</html>
+
+<script type="text/javascript" src="script.js"></script>
